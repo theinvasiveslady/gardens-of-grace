@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gardens of Grace</title>
+
+<style>
+@font-face {
+  font-family: "Nunito";
+  src: url("assets/nunito.light.ttf") format("truetype");
+}
+
+:root{
+  --bg:#faf7f2;
+  --text:#1f2937;
+  --line:rgba(31,41,55,0.18);
+  --green:#83B124;
+  --orange:#E9571D;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  font-family:"Nunito", Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+
+/* HERO & HEADER */
+.hero{
+  height:clamp(200px, 60vh, 500px);
+  background:url("assets/garden-hero.jpg") center/cover no-repeat;
+  border-bottom:1px solid var(--line);
+}
+
+.hero-brand{
+  text-align:center;
+  padding:clamp(16px, 5vw, 26px) 20px clamp(8px, 4vw, 10px);
+}
+
+.main-logo{
+  width:clamp(180px, 60vw, 260px);
+  margin-bottom:clamp(8px, 3vw, 10px);
+  height:auto;
+}
+
+h1{
+  color:var(--green);
+  font-size:clamp(24px, 6vw, 36px);
+  margin:0 0 clamp(4px, 2vw, 6px);
+  font-weight:700;
+  letter-spacing:0.5px;
+}
+
+.tagline{
+  font-weight:600;
+  opacity:.85;
+  font-size:clamp(13px, 3.5vw, 16px);
+  margin:0;
+  padding:0 10px;
+}
+
+/* CONTENT LAYOUT */
+.wrap{
+  max-width:900px;
+  margin:auto;
+  padding:0 clamp(15px, 4vw, 20px);
+}
+
+.section{ 
+  padding:clamp(12px, 3vw, 20px) 0;
+}
+
+hr{
+  border:none;
+  border-top:1px solid var(--line);
+  margin:clamp(12px, 3vw, 16px) 0;
+}
+
+/* TYPOGRAPHY */
+h2{
+  color:var(--orange);
+  font-weight:700;
+  margin-bottom:clamp(8px, 2vw, 10px);
+  font-size:clamp(18px, 4vw, 24px);
+  margin-top:0;
+}
+
+p{ 
+  margin:clamp(6px, 2vw, 8px) 0;
+  font-size:clamp(14px, 2.5vw, 16px);
+}
+
+ul{ 
+  padding-left:clamp(16px, 4vw, 24px);
+  margin:clamp(8px, 2vw, 16px) 0;
+}
+
+li{ 
+  margin:clamp(8px, 2vw, 10px) 0;
+  font-size:clamp(14px, 2.5vw, 16px);
+}
+
+/* CONTACT & LINKS */
+.contact-info{
+  margin-top:clamp(12px, 3vw, 16px);
+}
+
+.contact-info p {
+  margin:clamp(10px, 2vw, 16px) 0;
+}
+
+.contact-info a{
+  color:var(--green);
+  text-decoration:none;
+  padding:8px 4px;
+  display:inline-block;
+  border-radius:4px;
+  transition:all 0.2s ease;
+  min-height:44px;
+  display:flex;
+  align-items:center;
+}
+
+.contact-info a:hover{
+  text-decoration:underline;
+  background-color:rgba(131, 177, 36, 0.1);
+}
+
+.contact-info a:active{
+  background-color:rgba(131, 177, 36, 0.2);
+}
+
+/* IMAGES */
+.bottom-photo{
+  width:100%;
+  height:auto;
+  margin-top:clamp(16px, 4vw, 20px);
+  border-top:1px solid var(--line);
+  display:block;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  font-size:clamp(11px, 2.5vw, 12px);
+  padding:clamp(16px, 3vw, 20px);
+  border-top:1px solid var(--line);
+  opacity:.6;
+}
+
+/* TABLET BREAKPOINT (768px) */
+@media (max-width: 768px) {
+  .wrap {
+    max-width: 100%;
+  }
+  
+  .hero {
+    height: clamp(180px, 50vh, 400px);
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 15px;
+  }
+  
+  li {
+    font-size: 15px;
+  }
+}
+
+/* MOBILE BREAKPOINT (480px) */
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px;
+  }
+  
+  .hero {
+    height: clamp(140px, 45vh, 280px);
+  }
+  
+  .hero-brand {
+    padding: 16px 15px 8px;
+  }
+  
+  .main-logo {
+    width: 150px;
+  }
+  
+  h1 {
+    font-size: 22px;
+    letter-spacing: 0.3px;
+  }
+  
+  .tagline {
+    font-size: 12px;
+  }
+  
+  .wrap {
+    padding: 0 15px;
+  }
+  
+  .section {
+    padding: 14px 0;
+  }
+  
+  h2 {
+    font-size: 18px;
+  }
+  
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  ul {
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+  
+  li {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+  
+  hr {
+    margin: 12px 0;
+  }
+  
+  .contact-info a {
+    padding: 12px 6px;
+    min-height: 48px;
+  }
+  
+  footer {
+    padding: 16px;
+    font-size: 11px;
+  }
+}
+
+/* SMALL MOBILE (320px - Extra small) */
+@media (max-width: 320px) {
+  h1 {
+    font-size: 20px;
+  }
+  
+  .tagline {
+    font-size: 11px;
+  }
+  
+  h2 {
+    font-size: 16px;
+  }
+  
+  p, li {
+    font-size: 13px;
+  }
+}
+
+/* DESKTOP OPTIMIZATION (1024px+) */
+@media (min-width: 1024px) {
+  .contact-info a:hover {
+    background-color: rgba(131, 177, 36, 0.15);
+    text-decoration: underline;
+  }
+}
+
+/* PRINT STYLES */
+@media print {
+  .hero {
+    height: auto;
+    display: none;
+  }
+  
+  body {
+    background: white;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero"></header>
+
+<div class="hero-brand">
+  <img src="assets/gardens-of-grace-logo.svg" class="main-logo">
+  <h1>Gardens of Grace</h1>
+  <p class="tagline">Restoring Hope. Cultivating Dignity. Empowering Community.</p>
+</div>
+
+<main class="wrap">
+
+<div class="section">
+<hr>
+<h2>Our Ecosystem</h2>
+
+<p>Imagine life without a dream. Without purpose. Just surviving day to day.</p>
+
+<p>In our community, the environment is shaped by gangs, drugs, and the constant echo of gunshots. This is not a headline—it is the reality we wake up to every morning. Gardens of Grace was born from a simple but urgent question: How do we restore hope where it has been steadily eroded?</p>
+
+<p>Everyone carries a dream of building something better—for themselves, their families, and their future. Yet for many in our community, life is lived in survival mode, where daily hardship makes it difficult to see beyond today.</p>
+
+<p>Gardens of Grace is more than a project; it is a vision for a sustainable future.</p>
+</div>
+
+<div class="section">
+<hr>
+<h2>The Garden: An Interruption</h2>
+
+<ul>
+<li><strong>Visible Growth:</strong> A place where effort turns into something tangible and life-giving.</li>
+<li><strong>Safety & Structure:</strong> A space that offers belonging, routine, and purpose.</li>
+<li><strong>Grace in Action:</strong> Everyone has equal worth, and everyone is welcome.</li>
+<li><strong>Restoring the Future:</strong> Moving from survival mode toward stability and possibility.</li>
+<li><strong>Building Confidence:</strong> A stepping stone to skills and economic participation.</li>
+<li><strong>Community Advocacy:</strong> Giving voice to the unheard while addressing systemic challenges.</li>
+</ul>
+</div>
+
+<div class="section">
+<hr>
+<h2>What Grace Means to Us</h2>
+
+<p>At the garden, you are not defined by your past, your struggles, or where you come from.</p>
+
+<p>Here, hope becomes something you can touch, smell, and see.</p>
+
+<ul>
+<li><strong>Identity Is Reclaimed</strong></li>
+<li><strong>Confidence Is Restored</strong></li>
+<li><strong>Everyone Is Equal</strong></li>
+</ul>
+</div>
+
+<div class="section">
+<hr>
+<h2>The Garden: A Place for Change</h2>
+
+<p>We cannot change everything overnight, but we can create a space that disrupts the cycle.</p>
+
+<p>You don’t just see plants growing—you see people reclaiming their worth and their power.</p>
+</div>
+
+<div class="section">
+<hr>
+<h2>Growing Together, Eating Together</h2>
+
+<ul>
+<li><strong>Local Growth for Local People:</strong> Most food grown in Newlands stays in Newlands.</li>
+<li><strong>Power in Your Hands:</strong> From handouts to dignity and ownership.</li>
+<li><strong>The Spirit of ILIMA:</strong> Collective work where everyone benefits.</li>
+<li><strong>Earth-Friendly Skills:</strong> Sustainable farming for the future.</li>
+</ul>
+</div>
+
+<div class="section">
+<hr>
+<h2>Join the Movement</h2>
+
+<p>We are reshaping the story of our community, one seed at a time. Help us grow a future where hope is a reality for everyone.</p>
+
+<div class="contact-info">
+  <p><strong>Visit us:</strong><br>
+    <a href="https://maps.app.goo.gl/WimfQKhFvwx5Qaov9" target="_blank">
+      Corner of 13th Street and Newlands Road, Newlands, Johannesburg
+    </a>
+  </p>
+
+  <p><strong>Contact us on WhatsApp:</strong><br>
+    <a href="https://wa.me/27635186832">063 518 6832</a>
+  </p>
+
+  <p><strong>Email us:</strong><br>
+    <a href="mailto:info@gardensofgrace.org.za">info@gardensofgrace.org.za</a>
+  </p>
+</div>
+
+<img src="assets/hero-2.jpg" class="bottom-photo">
+
+</main>
+
+<footer>
+© <span id="year"></span> Gardens of Grace
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
